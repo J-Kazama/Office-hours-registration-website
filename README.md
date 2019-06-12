@@ -1,2 +1,1 @@
-"# Scheduler" 
-"# rep1" 
+"# Website for scheduling office-hour sessions" 
