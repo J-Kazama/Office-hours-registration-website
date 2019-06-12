@@ -1,0 +1,28 @@
+<!-- Need to have a button that logs out and redirects to sign-in
+     That you click, it logs you out and redirects to homepage (sign-in)
+     Right now, when logged out (from admin) it does go to sign in page, so I just need a button
+     for signing out, not a path. Also, I access the professors page without being logged-in
+     I need to check how not to do so.
+
+   -->
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Use your PatWeb credentials to sign in</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign in</button>
+            </div>
+        </form>
+        <!--<div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+            </small>
+        </div> -->
+    </div>
+{% endblock content %}
