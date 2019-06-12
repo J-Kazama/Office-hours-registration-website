@@ -1,1 +1,1 @@
-"# Website for scheduling office-hour sessions" 
+Website for scheduling office-hour sessions
