@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'login.apps.LoginConfig', # Front page for loginning in
+    'login', # Front page for loginning in
     'professors', # Selecting a professor for office hours
     'crispy_forms',
     'django.contrib.admin',
@@ -136,6 +136,6 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Redirects according to the name of path in URLs
-LOGIN_REDIRECT_URL = 'professors'
+LOGIN_REDIRECT_URL = 'professors/'
 
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = ''

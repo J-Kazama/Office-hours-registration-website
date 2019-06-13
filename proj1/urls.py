@@ -19,8 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('login.urls')),
-    path('', auth_views.LoginView.as_view(template_name='login/sign.html'), name='login'),
-    path('professors/', auth_views.LoginView.as_view(template_name='professors/index.html'), name='professors'),
-    #path('professors/', include('professors.urls')) # URL for professors
+    #path('', auth_views.LoginView.as_view(template_name='login/sign.html'), name='login'),
+    path('home/', include('login.urls')),
+    path('professors/', include('professors.urls')), # URL for professors
 ]
